@@ -37,6 +37,7 @@ export default function App() {
 
 const Container = styled.main`
   max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   @media (max-width: 600) {

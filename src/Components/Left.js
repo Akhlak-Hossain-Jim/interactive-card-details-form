@@ -64,12 +64,16 @@ export default function Left({
 const Container = styled.div`
   background-image: url("/images/bg-main-desktop.png");
   background-repeat: no-repeat;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 27px;
   position: relative;
   color: var(--white);
+  @media (max-width: 600px) {
+    height: 400px;
+  }
   .card {
     &_front {
       width: min(447px, 100%);
@@ -77,6 +81,15 @@ const Container = styled.div`
       margin-left: auto;
       margin-right: 108px;
       position: relative;
+      @media (max-width: 900px) {
+        width: min(447px, 90%);
+        transform: translate(10%);
+      }
+      @media (max-width: 600px) {
+        width: min(447px, 85%);
+        transform: translate(10%) translateY(18%);
+        z-index: 2;
+      }
       & > img {
         width: 100%;
         height: auto;
@@ -84,8 +97,10 @@ const Container = styled.div`
       }
       &__data {
         position: absolute;
-        top: 54%;
-        left: 7%;
+        width: 100%;
+        bottom: 14%;
+        left: 0%;
+        padding: 0 24px;
         display: flex;
         flex-direction: column;
         gap: 26px;
@@ -93,6 +108,9 @@ const Container = styled.div`
           font-size: 28px;
           line-height: 36px;
           letter-spacing: 0.12em;
+          @media (max-width: 900px) {
+            font-size: 130%;
+          }
         }
         &_bottom {
           display: flex;
@@ -101,6 +119,9 @@ const Container = styled.div`
           line-height: 18px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
+          @media (max-width: 600px) {
+            font-size: 90%;
+          }
         }
       }
     }
@@ -110,6 +131,17 @@ const Container = styled.div`
       margin-left: auto;
       margin-right: 14px;
       position: relative;
+      @media (max-width: 900px) {
+        width: min(447px, 90%);
+        transform: translateX(20%) translateY(-10%);
+      }
+      @media (max-width: 900px) {
+        width: min(447px, 85%);
+        position: absolute;
+        top: 10%;
+        z-index: 1;
+        transform: translateX(2%) translateY(-10%);
+      }
       & > img {
         width: 100%;
         height: auto;

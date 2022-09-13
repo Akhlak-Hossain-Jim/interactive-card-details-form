@@ -159,6 +159,11 @@ const Container = styled.div`
     margin: auto;
     margin-left: 10%;
     gap: 9px;
+    padding-right: 24px;
+    @media (max-width: 600px) {
+      margin: 0;
+      padding: 24px;
+    }
     label {
       font-size: 12px;
       line-height: 100%;

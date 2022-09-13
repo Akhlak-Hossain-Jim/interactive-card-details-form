@@ -37,10 +37,11 @@ export default function App() {
 
 const Container = styled.main`
   max-width: 1440px;
+  min-height: min(100vh, 900px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: 600) {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
   @media (min-width: 900px) {
